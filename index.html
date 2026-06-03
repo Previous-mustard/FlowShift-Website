@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowShift — AI Automation for Small Businesses in Gauteng</title>
+  <meta name="description" content="We help small businesses in Pretoria and Gauteng automate their manual processes using AI. Workflow automation, document processing, AI assistants, and more. Book a free discovery call.">
+  <meta property="og:title" content="AI Automation for Gauteng SMEs · FlowShift">
+  <meta property="og:description" content="Stop losing hours to manual work. We help small businesses in Gauteng automate their processes using AI — so your team can focus on what actually matters.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://[yourdomain].co.za">
+  <link rel="canonical" href="https://[yourdomain].co.za">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">FlowShift</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="nav-links-cta">
+          <a href="https://calendly.com/izakpieterkruger1/free-discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-nav" onclick="return openCalendly();">Book a free call</a>
+        </li>
+      </ul>
+      <a href="https://calendly.com/izakpieterkruger1/free-discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-nav nav-cta-desk" onclick="return openCalendly();">Book a free call</a>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <i data-lucide="menu" class="icon-menu" aria-hidden="true"></i>
+        <i data-lucide="x" class="icon-close" aria-hidden="true"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">AI automation · Pretoria &amp; Gauteng</p>
+      <h1 class="hero-headline reveal">Your team is spending hours on work that shouldn't need a human.</h1>
+      <p class="hero-sub reveal">We help small businesses in Gauteng automate their manual processes — so your people can stop doing repetitive work and start doing the work that actually grows your business.</p>
+      <div class="hero-ctas reveal">
+        <a href="https://calendly.com/izakpieterkruger1/free-discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-hero-primary" onclick="return openCalendly();">Book a free discovery call</a>
+        <a href="#how-it-works" class="btn btn-hero-ghost">See how it works ↓</a>
+      </div>
+      <div class="scroll-indicator reveal" aria-hidden="true">
+        <i data-lucide="chevron-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tool strip -->
+  <div class="tool-strip">
+    <div class="container tool-strip-inner">
+      <span class="tool-label">Built with</span>
+      <span class="tool-items">n8n · Make · Flowise · Claude AI · OpenAI</span>
+    </div>
+  </div>
+
+  <!-- Problem section -->
+  <section id="problem" class="section-white">
+    <div class="container">
+      <p class="eyebrow eyebrow-dark reveal">The problem</p>
+      <h2 class="section-heading reveal">You're losing more time than you realise</h2>
+      <div class="problem-body reveal">
+        <p>Most small businesses are running on a mix of spreadsheets, emails, and manual steps that made sense when the business was smaller. Now those same processes are quietly costing you 15 to 25 hours a week — in time your team spends moving information from one place to another instead of doing actual work.</p>
+        <p>The frustrating part: most of it is automatable. Your team just doesn't know how.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card reveal">
+          <i data-lucide="file-text" aria-hidden="true"></i>
+          <h3>Document processing</h3>
+          <p>Invoices, contracts, and intake forms that someone reads, extracts information from, and captures manually — every single time.</p>
+        </div>
+        <div class="pain-card reveal">
+          <i data-lucide="repeat" aria-hidden="true"></i>
+          <h3>Data re-entry</h3>
+          <p>The same information typed into your accounting software, your CRM, and a spreadsheet. Three times. By a person.</p>
+        </div>
+        <div class="pain-card reveal">
+          <i data-lucide="bar-chart-2" aria-hidden="true"></i>
+          <h3>Manual reporting</h3>
+          <p>A weekly or monthly report that takes half a day to pull together from different sources — then sent by hand.</p>
+        </div>
+        <div class="pain-card reveal">
+          <i data-lucide="bell" aria-hidden="true"></i>
+          <h3>Follow-up chasing</h3>
+          <p>Client reminders, quote follow-ups, and appointment confirmations sent manually by someone who has better things to do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="section-off-white">
+    <div class="container">
+      <h2 class="section-heading reveal">How it works</h2>
+      <div class="steps-row">
+        <div class="step reveal">
+          <span class="step-number" aria-hidden="true">01</span>
+          <h3 class="step-title">AI Audit</h3>
+          <p class="step-body">We spend two to three hours mapping your current processes together. You walk our team through how your business actually operates — we identify where the time is being lost and what's automatable. You leave with a clear picture of your biggest opportunities and a prioritised roadmap to act on them.</p>
+        </div>
+        <span class="step-connector" aria-hidden="true"></span>
+        <div class="step reveal">
+          <span class="step-number" aria-hidden="true">02</span>
+          <h3 class="step-title">Build &amp; deploy</h3>
+          <p class="step-body">Our team designs, builds, tests, and deploys your automations. Before anything gets built, we agree on exactly what's being built, what it will do, and what it won't. Fixed scope. No surprises. We handle everything — you review the result.</p>
+        </div>
+        <span class="step-connector" aria-hidden="true"></span>
+        <div class="step reveal">
+          <span class="step-number" aria-hidden="true">03</span>
+          <h3 class="step-title">Ongoing support</h3>
+          <p class="step-body">Once your automations are running, we stay on as your automation partner. Monitoring, optimising, fixing edge cases, and building the next thing as your business grows. Your systems keep improving without you having to think about it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we automate -->
+  <section id="services" class="section-white">
+    <div class="container">
+      <h2 class="section-heading reveal">What we automate</h2>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <i data-lucide="zap" aria-hidden="true"></i>
+          <h3>Workflow automation</h3>
+          <p>Your apps and systems connected so information flows automatically — without anyone copying, pasting, or manually triggering the next step.</p>
+        </div>
+        <div class="service-card reveal">
+          <i data-lucide="file-search" aria-hidden="true"></i>
+          <h3>Document processing</h3>
+          <p>AI that reads your invoices, contracts, intake forms, and emails — extracts what matters, and routes it to the right place. No manual data capture.</p>
+        </div>
+        <div class="service-card reveal">
+          <i data-lucide="bot" aria-hidden="true"></i>
+          <h3>AI assistants</h3>
+          <p>Custom AI tools trained on your business — your products, your processes, your knowledge. Your team gets answers instantly instead of asking the same questions over and over.</p>
+        </div>
+        <div class="service-card reveal">
+          <i data-lucide="trending-up" aria-hidden="true"></i>
+          <h3>Automated reporting</h3>
+          <p>Reports that pull from your data sources, compile themselves, and land in your inbox on schedule. Monday morning ops reports. Weekly sales summaries. No manual work.</p>
+        </div>
+        <div class="service-card reveal">
+          <i data-lucide="mail" aria-hidden="true"></i>
+          <h3>Email &amp; CRM workflows</h3>
+          <p>Lead follow-ups, client reminders, quote sequences, and status updates sent automatically — at the right time, to the right person, without anyone hitting send.</p>
+        </div>
+        <div class="service-card reveal">
+          <i data-lucide="headphones" aria-hidden="true"></i>
+          <h3>Customer service AI</h3>
+          <p>An AI layer that handles your routine customer queries around the clock — FAQs, order status, appointment booking — and escalates only the ones that genuinely need a person.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="section-testimonial">
+    <div class="container">
+      <p class="eyebrow testimonial-eyebrow reveal">What clients say</p>
+      <div class="testimonial-track" id="testimonial-track">
+        <div class="testimonial-card testimonial-card--featured reveal">
+          <span class="tcard-qmark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="tcard-quote">
+            We were spending most of Monday morning pulling together our weekly ops report from four different systems. It now runs automatically every Friday evening and lands in our inbox before the week even starts. That time is ours again.
+          </blockquote>
+          <div class="tcard-author">
+            <div class="tcard-avatar" aria-hidden="true">JS</div>
+            <div>
+              <p class="tcard-name">Hannes Van Vuuren</p>
+              <p class="tcard-role">Operations Manager · Logistics company, Centurion</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <span class="tcard-qmark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="tcard-quote">
+            The AI assistant answers about 70% of our client queries automatically now. Our team only handles the complex stuff. It's completely changed how we run our support desk.
+          </blockquote>
+          <div class="tcard-author">
+            <div class="tcard-avatar" aria-hidden="true">MN</div>
+            <div>
+              <p class="tcard-name">Mark Nkosi</p>
+              <p class="tcard-role">Managing Director · Property agency, Sandton</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <span class="tcard-qmark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="tcard-quote">
+            We had three people spending half their day on data capture. That's gone now. Same team, half the admin, error rate basically zero. The ROI was obvious within the first month.
+          </blockquote>
+          <div class="tcard-author">
+            <div class="tcard-avatar" aria-hidden="true">SP</div>
+            <div>
+              <p class="tcard-name">Sarah Patel</p>
+              <p class="tcard-role">Finance Manager · Accounting firm, Pretoria</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonial-dots">
+        <button class="tdot tdot--active" data-index="0" aria-label="Go to testimonial 1"></button>
+        <button class="tdot" data-index="1" aria-label="Go to testimonial 2"></button>
+        <button class="tdot" data-index="2" aria-label="Go to testimonial 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section-off-white">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2 class="section-heading reveal">About FlowShift</h2>
+        <div class="about-body reveal">
+          <p>We are a Pretoria-based AI automation consultancy focused on one thing: helping small businesses in Gauteng get back the time they're losing to manual work.</p>
+          <p>Our approach is hands-on and practical. We don't arrive with a stack of slides and a generic AI strategy. We get into your operations, understand how your business actually runs, and build automations that fit the way your team works — not the other way around.</p>
+          <p>Every engagement is led by a senior consultant from start to finish. You get direct access to the people doing the work, clear communication throughout, and automations that are built to last.</p>
+          <p>We work with SMEs across accounting, legal, property, logistics, healthcare, and professional services. If your team is spending time on work that a well-built system could handle, we can help.</p>
+        </div>
+        <p class="about-location reveal">Pretoria, Gauteng · Serving businesses across South Africa</p>
+        <a href="https://www.linkedin.com/in/izak-kruger-97b245233/" target="_blank" rel="noopener noreferrer" class="about-linkedin reveal">Connect with us on LinkedIn →</a>
+      </div>
+      <div class="about-visual" aria-hidden="true">
+        <span>Photo coming soon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section-cta">
+    <div class="container cta-inner">
+      <h2 class="cta-headline reveal">Find out where your business is losing time</h2>
+      <p class="cta-sub reveal">Start with an AI Audit. In two to three hours, our team maps your processes, identifies your automation opportunities, and gives you a clear roadmap — whether you work with us afterwards or not.</p>
+      <a href="https://calendly.com/izakpieterkruger1/free-discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-cta reveal" onclick="return openCalendly();">Book your free discovery call</a>
+      <p class="cta-trust reveal">No commitment. No tech jargon. Just a clear picture of what's possible for your business.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+
+    <!-- Main footer grid -->
+    <div class="container footer-main">
+
+      <!-- Col 1: Brand + LinkedIn -->
+      <div class="footer-col footer-brand">
+        <p class="footer-logo-text">FlowShift</p>
+        <p class="footer-tagline">AI automation for Gauteng SMEs.</p>
+        <a href="https://www.linkedin.com/in/izak-kruger-97b245233/"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-linkedin" aria-label="Visit us on LinkedIn">
+          <i data-lucide="linkedin" aria-hidden="true"></i>
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- Col 2: Contact info -->
+      <div class="footer-col footer-contact">
+        <p class="footer-col-label">Contact</p>
+        <ul class="footer-contact-list">
+          <li>
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            345 Rosemary Road, Lynnwood, Pretoria
+          </li>
+          <li>
+            <i data-lucide="mail" aria-hidden="true"></i>
+            <a href="mailto:hello@[yourdomain].co.za">hello@[yourdomain].co.za</a>
+          </li>
+          <li>
+            <i data-lucide="phone" aria-hidden="true"></i>
+            <a href="tel:+270000000000">+27 00 000 0000</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 3: CTA -->
+      <div class="footer-col footer-cta-col">
+        <p class="footer-col-label">Ready to automate?</p>
+        <p class="footer-cta-text">Book a free 30-minute discovery call. No commitment.</p>
+        <a href="https://calendly.com/izakpieterkruger1/free-discovery-call"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn-footer-cta"
+           onclick="return openCalendly();">
+          Book a free discovery call
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="container footer-bottom">
+      <p class="footer-copy">© 2026 FlowShift · Pretoria, South Africa</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#">Privacy Policy</a>
+      </nav>
+    </div>
+
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <div class="whatsapp-wrap">
+    <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+    <a href="https://wa.me/[PHONE_NUMBER]?text=Hi%2C%20I%27d%20like%20to%20find%20out%20more%20about%20your%20AI%20automation%20services"
+       class="whatsapp-btn"
+       aria-label="Chat on WhatsApp"
+       target="_blank"
+       rel="noopener noreferrer">
+      <i data-lucide="message-circle" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
