@@ -12,7 +12,7 @@
   /* Accent */
   --color-accent:        #4a43a0;
   --color-accent-dark:   #3a3480;
-  --color-accent-ghost:  rgba(74, 67, 160, 0.07);
+  --color-accent-ghost:  rgba(74, 67, 160, 0.15);
   --color-accent-shadow: rgba(74, 67, 160, 0.12);
 
   /* Text */
@@ -203,9 +203,9 @@ button {
 }
 
 .nav-logo {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+  font-family: 'Instrument Serif', serif;
+  font-size: 22px;
+  font-weight: 400;
   color: var(--color-text-light);
   position: relative;
   z-index: 1001;
@@ -1302,4 +1302,71 @@ section[id], #footer {
   /* Stagger: testimonial cards (desktop 3-up) */
   .testimonial-card:nth-child(2) { transition-delay: 80ms; }
   .testimonial-card:nth-child(3) { transition-delay: 160ms; }
+}
+
+/* ============================================================
+   PHONE CTA — demo page
+   ============================================================ */
+.phone-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.phone-cta-link {
+  display: block;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(40px, 8vw, 72px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-accent);
+  text-decoration: none;
+  padding: var(--space-lg) var(--space-xl);
+  margin: var(--space-md) 0;
+  transition: color 150ms ease;
+}
+
+.phone-cta-link:hover {
+  color: var(--color-accent-dark);
+}
+
+.phone-cta-note {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+  margin-top: var(--space-sm);
+}
+
+/* ============================================================
+   PLAIN LIST — demo page "what it does" bullets
+   ============================================================ */
+.plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: var(--content-width);
+}
+
+.plain-list li {
+  position: relative;
+  padding-left: var(--space-lg);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.plain-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 500;
 }
