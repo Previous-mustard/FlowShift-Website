@@ -15,11 +15,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+<body class="demo-page">
 
   <!-- Nav -->
   <nav id="nav">
@@ -43,10 +43,11 @@
   </nav>
 
   <!-- Hero -->
-  <section class="section-white" style="padding-top: calc(var(--space-3xl) + 64px);">
+  <section id="hero" class="section-dark demo-hero" style="padding-top: calc(var(--space-3xl) + 64px);">
     <div class="container">
-      <h1 class="section-heading reveal">Your business is losing jobs to missed calls. Here's the fix.</h1>
-      <div class="problem-body reveal">
+      <p class="hero-eyebrow reveal"><span class="hero-eyebrow-rule"></span>AI receptionist demo</p>
+      <h1 class="hero-headline reveal">Your business is losing jobs to <span class="hero-highlight">missed calls</span>. Here's the fix.</h1>
+      <div class="hero-copy reveal">
         <p>When you're on a job, you can't answer the phone. That caller doesn't wait — they dial the next business on Google. At R5,000–R15,000 per job, that adds up fast.</p>
         <p>We build AI receptionists for trades and service businesses in Gauteng. The AI answers every call in your business name, 24/7 — captures the job details, checks your calendar, books the work, and sends you a WhatsApp. The caller gets an SMS confirmation. Nothing falls through.</p>
       </div>
@@ -54,62 +55,91 @@
   </section>
 
   <!-- Phone CTA centerpiece -->
-  <section class="section-off-white">
-    <div class="container phone-cta reveal">
-      <p class="eyebrow eyebrow-dark">Call the demo line and hear it for yourself.</p>
-      <a href="tel:+27872379800" class="phone-cta-link">+27 87 237 9800</a>
-      <p class="phone-cta-note">Takes 60 seconds. That's what we'd build for your business.</p>
+  <section class="section-dark demo-phone-section">
+    <div class="container demo-phone-panel reveal">
+      <p class="demo-phone-label">Call the demo line and hear it for yourself.</p>
+      <div class="demo-phone-ring">
+        <span class="demo-phone-ring-outer"></span>
+        <span class="demo-phone-ring-inner"></span>
+        <a href="tel:+27872500505" class="demo-phone-number"><span class="demo-phone-prefix">+27</span> 87 250 0505</a>
+      </div>
+      <p class="demo-phone-note">Takes 60 seconds. That's what we'd build for your business.</p>
     </div>
   </section>
 
   <!-- What it does -->
-  <section class="section-white">
+  <section class="section-white demo-features-section">
     <div class="container">
       <h2 class="section-heading reveal">What it does</h2>
-      <ul class="plain-list reveal">
-        <li>Answers every call in your business name — day, night, weekends, load-shedding</li>
-        <li>Identifies the job, captures caller details, checks your calendar</li>
-        <li>Books the job directly — sends you a WhatsApp, sends the caller an SMS</li>
-        <li>Transfers emergencies (burst pipe, no power) straight to your mobile</li>
-      </ul>
+      <div class="feature-card-list reveal">
+        <div class="feature-row">
+          <div class="feature-icon"><i data-lucide="phone-call" aria-hidden="true"></i></div>
+          <div>
+            <h3>Answers every call in your business name — day, night, weekends, load-shedding</h3>
+            <p>Every caller hears a professional AI receptionist that captures their request and keeps the customer moving toward a booking.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon"><i data-lucide="calendar-check" aria-hidden="true"></i></div>
+          <div>
+            <h3>Identifies the job, captures caller details, checks your calendar</h3>
+            <p>The AI confirms availability while the customer is still on the line and prepares the booking details for your team.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon"><i data-lucide="calendar-check" aria-hidden="true"></i></div>
+          <div>
+            <h3>Books the job directly — sends you a WhatsApp, sends the caller an SMS</h3>
+            <p>Every confirmed booking is sent to you instantly, and the caller receives a clear message so they trust the process.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon"><i data-lucide="alert-triangle" aria-hidden="true"></i></div>
+          <div>
+            <h3>Transfers emergencies (burst pipe, no power) straight to your mobile</h3>
+            <p>Priority issues are flagged and passed through immediately, while routine work stays automated.</p>
+          </div>
+        </div>
+      </div>
       <p class="problem-body reveal" style="margin-top: var(--space-xl); margin-bottom: 0;">Plumbers, electricians, HVAC, pest control, security, appliance repair — any trades or service business in Gauteng missing calls while on the job.</p>
     </div>
   </section>
 
   <!-- How it works -->
-  <section class="section-white">
+  <section class="section-white demo-how-section">
     <div class="container">
       <h2 class="section-heading reveal">How it works</h2>
-      <div class="steps-row">
-        <div class="step reveal">
-          <span class="step-number" aria-hidden="true">01</span>
-          <h3 class="step-title">Call the demo</h3>
-          <p class="step-body">Dial +27 87 237 9800 and hear the AI answer in 60 seconds. That's what your customers would experience.</p>
+      <div class="step-grid reveal">
+        <div class="step-cell">
+          <span class="step-label">Step 01</span>
+          <h3>Call the demo</h3>
+          <p>Dial +27 87 237 9800 and hear the AI answer in 60 seconds. That is exactly what your customers would experience.</p>
+          <span class="step-dot step-dot--active" aria-hidden="true"></span>
         </div>
-        <span class="step-connector" aria-hidden="true"></span>
-        <div class="step reveal">
-          <span class="step-number" aria-hidden="true">02</span>
-          <h3 class="step-title">Book a call with us</h3>
-          <p class="step-body">We'll map your business: your services, your area, your call flow. No obligation.</p>
+        <div class="step-cell">
+          <span class="step-label">Step 02</span>
+          <h3>Book a call with us</h3>
+          <p>We'll map your business: your services, your area, your call flow. No obligation and no pressure.</p>
+          <span class="step-dot" aria-hidden="true"></span>
         </div>
-        <span class="step-connector" aria-hidden="true"></span>
-        <div class="step reveal">
-          <span class="step-number" aria-hidden="true">03</span>
-          <h3 class="step-title">Go live in under a week</h3>
-          <p class="step-body">We configure everything. You set call forwarding on your existing number. No number changes, no disruption.</p>
+        <div class="step-cell">
+          <span class="step-label">Step 03</span>
+          <h3>Go live in under a week</h3>
+          <p>We configure everything. You set call forwarding on your existing number. No number changes, no disruption.</p>
+          <span class="step-dot" aria-hidden="true"></span>
         </div>
       </div>
-      <p class="reveal" style="margin-top: var(--space-lg); font-size: 13px; color: var(--color-text-tertiary);">Straightforward monthly retainer. No lock-in contracts.</p>
+      <p class="section-note reveal">Straightforward monthly retainer. No lock-in contracts.</p>
     </div>
   </section>
 
   <!-- Final CTA -->
-  <section class="section-cta">
+  <section class="section-cta cta-band">
     <div class="container cta-inner">
       <h2 class="cta-headline reveal">Ready to stop missing calls?</h2>
-      <div class="hero-ctas reveal" style="margin-bottom: 0;">
-        <a href="tel:+27872379800" class="btn btn-cta">Call +27 87 237 9800</a>
-        <a href="[CALENDLY_LINK]" class="btn btn-hero-ghost">Book a discovery call</a>
+      <div class="hero-ctas reveal" style="margin-bottom: 0; gap: 12px; flex-direction: column; display: flex; align-items: stretch;">
+        <a href="tel:+27872500505" class="btn btn-cta btn-cta-primary">Call +27 87 250 0505</a>
+        <a href="[CALENDLY_LINK]" class="btn btn-cta btn-cta-secondary">Book a discovery call</a>
       </div>
     </div>
   </section>
