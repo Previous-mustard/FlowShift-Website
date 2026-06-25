@@ -67,6 +67,125 @@
     </div>
   </section>
 
+  <section style="max-width: 620px; margin: 2rem auto; font-family: inherit; box-sizing: border-box;">
+
+    <style>
+      .calc-wrap * { box-sizing: border-box; }
+      .calc-wrap { font-family: inherit; }
+      .calc-label { font-size: 13px; color: #6b7280; margin: 0 0 6px; display: block; }
+      .calc-row { margin-bottom: 1.5rem; }
+      .slider-row { display: flex; align-items: center; gap: 12px; }
+      .slider-row input[type=range] { flex: 1; accent-color: #4a43a0; height: 4px; cursor: pointer; }
+      .slider-val { font-size: 15px; font-weight: 500; color: #0a0a0a; min-width: 80px; text-align: right; }
+      .calc-section-label { font-size: 11px; font-weight: 600; color: #9ca3af; letter-spacing: 0.07em; text-transform: uppercase; margin: 0 0 1.5rem; }
+      .calc-result-block { background: #3C3489; border-radius: 12px; padding: 1.5rem; margin-top: 1.75rem; }
+      .calc-result-top { font-size: 13px; color: #AFA9EC; margin: 0 0 6px; }
+      .calc-result-number { font-size: 38px; font-weight: 600; color: #EEEDFE; margin: 0 0 4px; line-height: 1.1; }
+      .calc-result-sub { font-size: 13px; color: #AFA9EC; margin: 0 0 1.25rem; }
+      .calc-result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .calc-result-card { background: #26215C; border-radius: 8px; padding: 10px 12px; }
+      .calc-result-card-label { font-size: 11px; color: #7F77DD; margin: 0 0 3px; }
+      .calc-result-card-val { font-size: 16px; font-weight: 600; color: #CECBF6; margin: 0; }
+      .calc-cta-line { margin-top: 1.25rem; font-size: 13px; color: #AFA9EC; text-align: center; }
+      .calc-cta-line a { color: #CECBF6; font-weight: 600; text-decoration: none; }
+      .calc-cta-line a:hover { text-decoration: underline; }
+      @media (max-width: 480px) {
+        .calc-result-grid { grid-template-columns: 1fr 1fr; }
+        .calc-result-number { font-size: 28px; }
+      }
+    </style>
+
+    <div class="calc-wrap">
+
+      <p class="calc-section-label">How much are missed calls costing you?</p>
+
+      <div class="calc-row">
+        <label class="calc-label" for="fs-missed">Missed calls per week</label>
+        <div class="slider-row">
+          <input type="range" id="fs-missed" min="1" max="50" value="10" step="1">
+          <span class="slider-val" id="fs-missed-val">10 calls</span>
+        </div>
+      </div>
+
+      <div class="calc-row">
+        <label class="calc-label" for="fs-jobval">Average job value</label>
+        <div class="slider-row">
+          <input type="range" id="fs-jobval" min="500" max="20000" value="5000" step="500">
+          <span class="slider-val" id="fs-jobval-val">R 5,000</span>
+        </div>
+      </div>
+
+      <div class="calc-row">
+        <label class="calc-label" for="fs-close">Close rate — how many callers become jobs</label>
+        <div class="slider-row">
+          <input type="range" id="fs-close" min="10" max="90" value="50" step="5">
+          <span class="slider-val" id="fs-close-val">50%</span>
+        </div>
+      </div>
+
+      <div class="calc-result-block">
+        <p class="calc-result-top">Monthly revenue walking out the door</p>
+        <p class="calc-result-number" id="fs-monthly-loss">R 100,000</p>
+        <p class="calc-result-sub" id="fs-annual-sub">That is R 1,200,000 every year</p>
+
+        <div class="calc-result-grid">
+          <div class="calc-result-card">
+            <p class="calc-result-card-label">Missed calls / month</p>
+            <p class="calc-result-card-val" id="fs-stat-calls">40</p>
+          </div>
+          <div class="calc-result-card">
+            <p class="calc-result-card-label">Jobs lost / month</p>
+            <p class="calc-result-card-val" id="fs-stat-jobs">20</p>
+          </div>
+          <div class="calc-result-card">
+            <p class="calc-result-card-label">AI receptionist cost</p>
+            <p class="calc-result-card-val">~R 4,000</p>
+          </div>
+        </div>
+
+        <p class="calc-cta-line">Hear what it sounds like &rarr; call <a href="tel:+27872500505">+27 87 250 0505</a></p>
+      </div>
+
+    </div>
+
+    <script>
+      (function() {
+        var missed = document.getElementById('fs-missed');
+        var jobval = document.getElementById('fs-jobval');
+        var close  = document.getElementById('fs-close');
+
+        function fmt(n) {
+          return 'R ' + Math.round(n).toLocaleString('en-ZA');
+        }
+
+        function calc() {
+          var m = parseInt(missed.value);
+          var j = parseInt(jobval.value);
+          var c = parseInt(close.value) / 100;
+
+          var callsPerMonth = m * 4;
+          var jobsLost      = Math.round(callsPerMonth * c);
+          var monthlyLoss   = jobsLost * j;
+          var annualLoss    = monthlyLoss * 12;
+
+          document.getElementById('fs-missed-val').textContent    = m + ' call' + (m === 1 ? '' : 's');
+          document.getElementById('fs-jobval-val').textContent    = fmt(j);
+          document.getElementById('fs-close-val').textContent     = parseInt(close.value) + '%';
+          document.getElementById('fs-monthly-loss').textContent  = fmt(monthlyLoss);
+          document.getElementById('fs-annual-sub').textContent    = 'That is ' + fmt(annualLoss) + ' every year';
+          document.getElementById('fs-stat-calls').textContent    = callsPerMonth;
+          document.getElementById('fs-stat-jobs').textContent     = jobsLost;
+        }
+
+        missed.addEventListener('input', calc);
+        jobval.addEventListener('input', calc);
+        close.addEventListener('input', calc);
+        calc();
+      })();
+    </script>
+
+  </section>
+
   <!-- What it does -->
   <section class="section-white demo-features-section">
     <div class="container">
